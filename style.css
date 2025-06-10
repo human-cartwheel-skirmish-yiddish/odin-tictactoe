@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+/* if screen width >= 768 px, make the main skinnier so it's easier to read*/
+@media only screen and (min-width: 768px) {
+  main {
+    max-width: 60% !important;
+  }
+}
+
+/* Theme */
+:root.dark {
+  --base-bg: #24283b;
+  --base-text-color: white;
+  --base-highlight-color: #8ff0a4;
+} 
+
+:root.light {
+  --base-bg: white;
+  --base-text-color: #24283b;
+  --base-highlight-color: #7dcfff;
+}
+
+/* responsive */
+main {
+  width: 95%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* Styling classes */
+.flex {
+  display: flex;
+}
+
+/* Theme elements styling */
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  color: var(--base-text-color);
+  background: var(--base-bg);
+}
+
+main {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Gameboard */
+#gameboard-table {
+  border-collapse: collpase;
+  border: 2px solid var(--base-text-color, #24283b);
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#gameboard-table td {
+  border: 2px solid var(--base-text-color, #24283b);
+  font-size: 4rem;
+  width: 130px;
+  height: 130px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.player--active {
+  background: var(--base-highlight-color, #7dcfff);
+}
+
+/* Status display section */
+#display--status {
+  margin-top: 10px;
+  cursor: default;
+}
+
+#icon--theme-switch {
+  max-width: 30px;
+  cursor: pointer;
+  position: relative;
+  left: 95%;
+  margin-bottom: 10px;
+}
+
+#display--players {
+  justify-content: space-around;
+  font-size: 1.1rem;
+
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  border: 1px solid var(--base-text-color, #24283b);
+  background: var(--base-bg, white);
+  color: var(--base-text-color, #24283b);
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+
+  padding: 3px 6px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+button {
+  background-color: var(--base-bg, white);
+  border: 2px solid var(--base-text-color, #24283b);
+  color: var(--base-text-color, #24283b);
+  transition-duration: 0.4s;
+  font-size: 1.5rem;
+  font-family: inherit;
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: var(--base-text-color, #24283b);
+  border: 2px solid var(--base-bg, white);
+  color: var(--base-bg, white);
+}
+
+#buttons {
+  justify-content: center;
+  gap: 2rem;
+}
+
+#svg--theme-switch-color {
+  fill: var(--base-text-color, #24283b);
+}
